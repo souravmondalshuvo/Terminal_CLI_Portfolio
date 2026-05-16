@@ -1,0 +1,71 @@
+/* ─── Theme variants ─────────────────────────────────────────────
+   Each theme overrides a focused set of CSS variables; nothing else
+   in the codebase needs to know about themes. The `default` theme is
+   the values declared in tokens.css and applies when no [data-theme]
+   attribute is present.
+*/
+
+/* Amber CRT — warm, monochromatic */
+.terminal[data-theme="amber"] {
+  --bg:           #0d0905;
+  --surface:      #110b06;
+  --surface-2:    #1a130b;
+  --border:       #2a1f12;
+  --border-soft:  #21180e;
+
+  --fg:           #ffd9a0;
+  --fg-dim:       #d4a86a;
+  --fg-muted:     #7a5d35;
+  --fg-subtle:    #4a3922;
+
+  --accent:       #ffd56b;
+  --accent-soft:  #d4944a;
+  --link:         #ffe4a0;
+  --success:      #d4f56b;
+  --error:        #ff8c5a;
+}
+
+/* Matrix — phosphor green */
+.terminal[data-theme="matrix"] {
+  --bg:           #050805;
+  --surface:      #060c06;
+  --surface-2:    #0a160a;
+  --border:       #0f2a0f;
+  --border-soft:  #0c200c;
+
+  --fg:           #b4ffb4;
+  --fg-dim:       #88d088;
+  --fg-muted:     #2d5a2d;
+  --fg-subtle:    #1f401f;
+
+  --accent:       #6cf36c;
+  --accent-soft:  #4ac24a;
+  --link:         #d4ffd4;
+  --success:      #b4ffb4;
+  --error:        #ff6c6c;
+}
+
+/* Paper — light theme, low-saturation editorial */
+.terminal[data-theme="paper"] {
+  --bg:           #f5efe4;
+  --surface:      #faf6ec;
+  --surface-2:    #ebe3d3;
+  --border:       #d6cdb9;
+  --border-soft:  #e0d6c0;
+
+  --fg:           #2c2a26;
+  --fg-dim:       #5a5650;
+  --fg-muted:     #8a8275;
+  --fg-subtle:    #b3aa97;
+
+  --accent:       #b8541f;
+  --accent-soft:  #9b4517;
+  --link:         #1d4e89;
+  --success:      #2d6a4f;
+  --error:        #c0392b;
+}
+
+/* The page background should follow the paper theme too */
+body:has(.terminal[data-theme="paper"]) {
+  background: #f5efe4;
+}
