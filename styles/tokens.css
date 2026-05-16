@@ -1,0 +1,52 @@
+/* ─── Design tokens ──────────────────────────────────────────────
+   All visual constants live here as CSS custom properties. Themes
+   override these on `.terminal[data-theme="..."]`. Component CSS
+   reads tokens, never raw values.
+
+   Palette philosophy:
+     - Monochrome neutral foundation (zinc-leaning).
+     - One warm accent (amber) used sparingly for prompt + emphasis.
+     - One cool accent (blue) reserved for links only.
+*/
+
+:root {
+  /* Surfaces */
+  --bg:           #0a0a0a;
+  --surface:      #101010;
+  --surface-2:    #161616;
+  --border:       #262626;
+  --border-soft:  #1f1f1f;
+
+  /* Foreground */
+  --fg:           #e5e5e5;
+  --fg-dim:       #a3a3a3;
+  --fg-muted:     #737373;
+  --fg-subtle:    #525252;
+
+  /* Accents — used sparingly */
+  --accent:       #f5a623;   /* warm amber: prompt sigil, emphasis */
+  --accent-soft:  #c4831e;   /* muted version, for banner */
+  --link:         #5eb1ff;   /* cool blue: links only */
+  --success:      #22c55e;
+  --error:        #ef4444;
+
+  /* Typography */
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono',
+                  Menlo, Consolas, monospace;
+
+  --fs-base:      14px;
+  --fs-banner:    13px;
+  --fs-chrome:    12px;
+  --lh-base:      1.65;
+  --lh-banner:    1.1;
+
+  /* Spacing */
+  --pad-body:     20px 22px;
+  --pad-chrome:   10px 14px;
+  --pad-status:   8px 14px;
+
+  /* Layout */
+  --term-max-w:   960px;
+  --term-max-h:   760px;
+  --radius:       12px;
+}
