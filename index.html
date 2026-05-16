@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark light" />
+
+  <title>sourav@portfolio</title>
+  <meta name="description" content="Sourav Mondal — CSE undergraduate, solo developer of Shohoj. Terminal-style portfolio." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/terminal.css" />
+  <link rel="stylesheet" href="styles/themes.css" />
+
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <main class="terminal" id="terminal" aria-label="Interactive terminal portfolio">
+
+    <header class="terminal__chrome">
+      <div class="dots" aria-hidden="true">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <div class="terminal__title">sourav@portfolio — zsh</div>
+      <div class="terminal__chrome-spacer"></div>
+    </header>
+
+    <section class="terminal__body" data-body tabindex="-1"></section>
+
+    <footer class="terminal__status">
+      <span class="status__left" data-status-path>~</span>
+      <span class="status__right">
+        <span class="key">↑↓</span> history
+        <span class="sep">·</span>
+        <span class="key">Tab</span> complete
+        <span class="sep">·</span>
+        <span class="key">^L</span> clear
+      </span>
+    </footer>
+
+  </main>
+</body>
+</html>
