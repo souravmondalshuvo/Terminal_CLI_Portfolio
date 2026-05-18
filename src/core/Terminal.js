@@ -102,6 +102,8 @@ export class Terminal {
 
   _printWelcome() {
     const { profile, banner } = this;
+    this.renderer.muted(`Last login: ${this._loginTimestamp()} on ttys001`);
+    this.renderer.blank();
     this.renderer.write(banner, 'banner');
     this.renderer.blank();
     this.renderer.write(
@@ -117,6 +119,12 @@ export class Terminal {
       `Try <span class="key">projects</span> or <span class="key">about</span>.`
     );
     this.renderer.blank();
+  }
+
+  /** Unix-style timestamp: "Mon May 18 12:22:14 2026" */
+  _loginTimestamp() {
+    const [day, mon, dd, time, year] = new Date().toString().split(' ');
+    return `${day} ${mon} ${dd} ${time} ${year}`;
   }
 
   _spawnPrompt() {
