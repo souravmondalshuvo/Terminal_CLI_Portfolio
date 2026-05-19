@@ -179,7 +179,7 @@ export class Terminal {
     if (value !== undefined) prompt.setValue(value);
   }
 
-  /** Click anywhere → focus prompt (but don't steal anchor clicks). */
+  /** Click anywhere → focus prompt (but don't steal anchor clicks). */  
   _installGlobalHandlers() {
     document.addEventListener('click', (e) => {
       if (e.target.closest('a')) return;
